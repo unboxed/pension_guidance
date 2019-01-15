@@ -278,7 +278,7 @@ cy:
       description: Gwasanaeth am ddim a di-duedd gan y llywodraeth sy’n eich helpu i ddeall yr opsiynau ar gyfer eich cronfa bensiwn.
       intro:
         html: |
-          Ffoniwch <b>0800 138 3944</b> i <a href="%{appointment_url}">drefnu apwyntiad am ddim</a>
+          I <a href="%{appointment_url}">drefnu apwyntiad am ddim</a> ffoniwch <b>0800 138 3944</b>
       sfgb:
         html: |
           <p class="home-intro__text">Mae’r gwasanaeth Pension Wise yn cael ei gyflenwi gan y <a href="https://singlefinancialguidancebody.org.uk">Corff Cyfarwyddyd Ariannol Sengl</a></p>
