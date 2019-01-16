@@ -21,7 +21,7 @@ If you’ve already followed your pension provider’s complaints process, there
 
 You can contact The Pensions Advisory Service (TPAS) on 0800 011 3797 or by using their [online enquiry form](http://www.pensionsadvisoryservice.org.uk/contacting-us/online-enquiry-form).
 
-TPAS can give you free and independent advice if your complaint is about how your pension has been run, eg if your provider:
+TPAS can give you free and independent advice if your complaint is about how your pension has been run, e.g. if your provider:
 
 * has given you the wrong information
 * has taken too long to do something
