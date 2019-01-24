@@ -9,7 +9,7 @@ As of 1st January 2019, Pension Wise, The Money Advice Service and The Pensions
 Advisory Service are delivered by the [Single Financial Guidance Body](https://singlefinancialguidancebody.org.uk). Your
 data privacy rights are not affected.
 
-The Single Financial Guidance Body privacy notice can be [found here](https://singlefinancialguidancebody.org.uk/#openModal2). 
+The Single Financial Guidance Body privacy notice can be [found here](https://singlefinancialguidancebody.org.uk/#openModal2){: aria-label="Single Financial Guidance Body privacy notice"}
 
 If you would like more information on how your data is processed please see our
 [privacy policy](/en/privacy) or email [contact@pensionwise.gov.uk](mailto:contact@pensionwise.gov.uk).
