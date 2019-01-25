@@ -16,7 +16,7 @@ You can take your whole pension pot as cash.
 
 You pay tax when you take money from your pot. This is because when you’re paying into your pension you get tax relief on your contributions.
 
-^Find out [if you can book](/en/pension-type-tool) a free Pension Wise appointment.^
+^Find out [if you can book](/en/pension-type-tool){: aria-label="find out if you can book a free Pension Wise appointment"} a free Pension Wise appointment.^
 
 {::calculator id="take-whole-pot" locale="en" /}
 
