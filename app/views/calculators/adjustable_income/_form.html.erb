@@ -16,10 +16,6 @@
              label: Calculators::AdjustableIncomeForm.human_attribute_name(:pot),
              error_messages: errors[:pot] %>
 
-  <%= render 'calculators/form_input_hidden',
-             field: :desired_monthly_income,
-             value: form&.desired_monthly_income %>
-
   <%= render 'calculators/form_input_number',
              field: :age,
              css_classes: 'js-scroll-target',
@@ -27,19 +23,10 @@
              label: Calculators::AdjustableIncomeForm.human_attribute_name(:age),
              error_messages: errors[:age] %>
 
+  <%= render 'calculators/form_input_currency',
+             field: :desired_monthly_income,
+             value: form&.desired_monthly_income,
+             label: "Amount you'd like per month" %>
+
   <%= render 'calculators/form_input_submit' %>
 </form>
-
-<% if form %>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    dataLayer.push({
-      'event': 'CalculatorEstimate',
-      'valid': <%= form.valid? %>
-      <% if form.valid? %>
-      , 'pot': <%= form.pot.to_i %>
-      , 'age': <%= form.age.to_i %>
-      <% end %>
-    });
-  </script>
-<% end %>

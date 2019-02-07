@@ -8,6 +8,10 @@ module Calculators
       return unless request.xhr?
       status = @form.invalid? ? :bad_request : :ok
 
+      session[:pot] = form_params[:pot]
+      session[:age] = form_params[:age]
+      session[:desired_monthly_income] = form_params[:desired_monthly_income]
+
       render partial: 'calculators/adjustable_income/calculator',
              locals: { form: @form },
              status: status

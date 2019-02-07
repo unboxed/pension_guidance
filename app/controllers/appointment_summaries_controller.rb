@@ -20,10 +20,17 @@ class AppointmentSummariesController < ApplicationController
 
   def download
     @appointment_summary = AppointmentSummary.new(appointment_summary_params)
-    output_document = OutputDocument.new(@appointment_summary, 'generic')
+    # output_document = OutputDocument.new(@appointment_summary, 'generic')
 
-    send_data output_document.pdf,
-              filename: 'pension_wise.pdf', type: 'application/pdf'
+
+    pdf = CalculatorSummaryPdf.new
+
+    send_data pdf.render, filename: "my_summary_calculations.pdf",
+                          type: "application/pdf",
+                          disposition: "inline"
+
+    # send_data output_document.pdf,
+    #           filename: 'pension_wise.pdf', type: 'application/pdf'
   end
 
   def print

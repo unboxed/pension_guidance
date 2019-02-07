@@ -18,10 +18,10 @@ class PensionSummary < ApplicationRecord
   # after selection, which is different to the sequence in
   # which they're offered up as options.
   STEPS = %w(
+    take_cash
     leave_your_pot_untouched
     get_a_guaranteed_income
     get_an_adjustable_income
-    take_cash
     take_whole
     mix_your_options
     how_my_pension_is_taxed
