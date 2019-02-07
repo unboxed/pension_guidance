@@ -33,6 +33,7 @@ source 'https://rubygems.org' do # rubocop:disable Metrics/BlockLength
   gem 'postcodes_io'
   gem 'princely'
   gem 'puma'
+  gem 'prawn'
   gem 'rails', '~> 5.1.1'
   gem 'redis'
   gem 'rgeo'

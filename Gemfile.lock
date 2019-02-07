@@ -212,6 +212,7 @@ GEM
     parallel (1.10.0)
     parser (2.4.0.0)
       ast (~> 2.2)
+    pdf-core (0.7.0)
     pdf-inspector (1.2.1)
       pdf-reader (~> 1.0)
     pdf-reader (1.4.1)
@@ -231,6 +232,9 @@ GEM
     postcodes_io (0.2.0)
       excon (~> 0.39)
     powerpack (0.1.1)
+    prawn (2.2.2)
+      pdf-core (~> 0.7.0)
+      ttfunk (~> 1.5)
     princely (2.1.0)
     pry (0.10.4)
       coderay (~> 1.1.0)
@@ -449,6 +453,7 @@ DEPENDENCIES
   phoner!
   poltergeist!
   postcodes_io!
+  prawn!
   princely!
   pry-byebug!
   puma!

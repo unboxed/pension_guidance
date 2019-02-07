@@ -1,7 +1,7 @@
 # rubocop:disable Metrics/BlockLength
 Rails.application.routes.draw do
   scope ':locale', locale: /en|cy/ do
-    root 'home#show'
+    root to: redirect('/en/adjustable-income')
 
     constraints format: 'html' do
       resources :categories, only: 'show', path: 'browse'
