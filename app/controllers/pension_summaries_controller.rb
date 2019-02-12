@@ -96,14 +96,14 @@ class PensionSummariesController < ApplicationController
   end
 
   def download
-    calc = AdjustableIncomeCalculator.new(
-      age: session[:age].to_f,
-      pot: session[:pot].to_f,
-      desired_income: session[:desired_monthly_income].to_f
+
+    form = Calculators::AdjustableIncomeForm.new(
+      age: session[:age],
+      pot: session[:pot],
+      desired_monthly_income: session[:desired_monthly_income]
     )
 
-
-    pdf = CalculatorSummaryPdf.new(calc)
+    pdf = CalculatorSummaryPdf.new(form)
 
     send_data pdf.render, filename: "my_summary_calculations.pdf",
                           type: "application/pdf",

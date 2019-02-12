@@ -1,10 +1,10 @@
 class CalculatorSummaryPdf < Prawn::Document
   include ActionView::Helpers::NumberHelper
 
-  def initialize(calculator)
+  def initialize(form)
     super()
 
-    @calculator = calculator
+    @form = form
 
     pdf_title
     overview
@@ -52,10 +52,10 @@ class CalculatorSummaryPdf < Prawn::Document
     font_size(20) { text "Your summary" }
     move_down(10)
 
-    text "Based on what you’ve told us, if you use your #{number_to_currency(@calculator.pot)} pension pot to take an adjustable income, you could get:"
-    text "#{number_to_currency(@calculator.estimate[:tax_free_lump_sum])} tax free", style: :bold
+    text "Based on what you’ve told us, if you use your #{number_to_currency(@form.pot)} pension pot to take an adjustable income, you could get:"
+    text "#{number_to_currency(@form.estimate[:tax_free_lump_sum])} tax free", style: :bold
     text "and"
-    text "a monthly income of #{number_to_currency(@calculator.estimate[:monthly_income_until_life_expectancy])} until you’re #{number_to_currency(@calculator.estimate[:life_expectancy])}", style: :bold
+    text "a monthly income of #{number_to_currency(@form.estimate[:monthly_drawdown_amount])} until you’re #{@form.estimate[:desired_income_with_pot_growth_lasts_until]}", style: :bold
     move_down(10)
   end
 
