@@ -100,11 +100,11 @@ class PensionSummariesController < ApplicationController
     @outro  = get_guide('trusted-sources', prefixed: false)
     @guides = @summary.selected_steps.collect { |s| get_guide(s) }
 
-    # calc = AdjustableIncomeCalculator.new(
-    #   age: session[:age].to_f,
-    #   pot: session[:pot].to_f,
-    #   desired_income: session[:desired_monthly_income].to_f
-    # )
+    @form = AdjustableIncomeCalculator.new(
+      age: session[:age].to_f,
+      pot: session[:pot].to_f,
+      desired_income: session[:desired_monthly_income].to_f
+    )
 
     render pdf: 'your pension summary from Pension Wise',
            template: 'pension_summaries/print',
