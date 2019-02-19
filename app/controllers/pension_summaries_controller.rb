@@ -96,18 +96,22 @@ class PensionSummariesController < ApplicationController
   end
 
   def download
+    @intro  = get_guide('print-introduction')
+    @outro  = get_guide('trusted-sources', prefixed: false)
+    @guides = @summary.selected_steps.collect { |s| get_guide(s) }
 
-    form = Calculators::AdjustableIncomeForm.new(
-      age: session[:age],
-      pot: session[:pot],
-      desired_monthly_income: session[:desired_monthly_income]
-    )
+    # calc = AdjustableIncomeCalculator.new(
+    #   age: session[:age].to_f,
+    #   pot: session[:pot].to_f,
+    #   desired_income: session[:desired_monthly_income].to_f
+    # )
 
-    pdf = CalculatorSummaryPdf.new(form)
-
-    send_data pdf.render, filename: "my_summary_calculations.pdf",
-                          type: "application/pdf",
-                          disposition: "inline"
+    render pdf: 'your pension summary from Pension Wise',
+           template: 'pension_summaries/print',
+           handlers: %w(erb),
+           formats: %w(html),
+           layout: false,
+           disposition: 'inline'
   end
 
   private
