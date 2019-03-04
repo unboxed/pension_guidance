@@ -93,7 +93,7 @@
     &:hover,
     &:focus {
       &:after {
-        background-color: #aaa; 
+        background-color: #aaa;
       }
     }
   }
@@ -107,4 +107,13 @@
     }
   }
 
+}
+
+.option_panel_1 {
+  float: left;
+  width: 50%;
+}
+.option_panel_2 {
+  float: right;
+  width: 50%;
 }
