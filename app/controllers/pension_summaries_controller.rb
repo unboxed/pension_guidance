@@ -111,7 +111,8 @@ class PensionSummariesController < ApplicationController
            handlers: %w(erb),
            formats: %w(html),
            layout: false,
-           disposition: 'inline'
+           disposition: 'inline',
+           javascript_flag: true
   end
 
   private
